@@ -1,0 +1,38 @@
+/* CoursesComponent.css */
+
+
+.courses-container {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .courses-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .courses-table th, .courses-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .courses-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .courses-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .courses-table tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .status-inactive td {
+    background-color: #ddd;
+  }
+  
+  .removed-course td {
+    background-color: #ffcccc;
+  }
