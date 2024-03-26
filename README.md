@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Courses Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based web application for managing courses. It allows users to view a list of courses along with their details such as name, description, duration, price, availability, and more.
 
-## Available Scripts
+![Preview](preview.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Display a list of courses with their details.
+- Format the duration and published date for better readability.
+- Highlight courses based on their status and removal.
+- Responsive design for a seamless experience across different devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React
+- JavaScript
+- CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone git@github.com:emon535/cpd-clients.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Backend Response Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The backend provides a JSON response with the following structure:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```json
+{
+  "courses": [
+    {
+      "id": "Course ID",
+      "uuid": "Course UUID",
+      "name": "Course Name",
+      "description": "Course Description",
+      "freeAccess": "1 if Free Access, 0 if not",
+      "duration": "Course Duration in seconds",
+      "rating": "Course Rating",
+      "price": "Course Price",
+      "animalId": "ID of the Animal",
+      "animalName": "Name of the Animal",
+      "lessons": "Array of Lessons (if available)",
+      "status": "Course Status (1 for Published, 0 for Draft)",
+      "publishAt": "Date and Time of Course Publishing",
+      "createdAt": "Date and Time of Course Creation",
+      "removedAt": "Date and Time of Course Removal (if removed)"
+    },
+    // Other courses...
+  ]
+}
+```
